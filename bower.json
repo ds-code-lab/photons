@@ -1,0 +1,12 @@
+{
+  "name": "photons",
+  "description": "",
+  "main": "dist/photons.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
