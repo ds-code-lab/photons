@@ -52,20 +52,29 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
+/*!*********************!*\
+  !*** multi photons ***!
+  \*********************/
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1);
-	module.exports = __webpack_require__(2);
+	__webpack_require__(/*! photon-core */1);
+	module.exports = __webpack_require__(/*! ./src/index.js */2);
 
 
 /***/ },
 /* 1 */
+/*!******************************!*\
+  !*** external "photon-core" ***!
+  \******************************/
 /***/ function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
 /***/ },
 /* 2 */
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -75,29 +84,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.SkTfu = exports.PhUserAvatar = exports.PhTestTester = exports.PhTest = exports.PhTfu = exports.PhIconSvgImg = exports.PhImage = exports.PhIconBadge = exports.PhIcon = exports.PhCheckbox = exports.PhButton = exports.PhAvatar = undefined;
 	
-	var _phAvatar = __webpack_require__(3);
+	var _phAvatar = __webpack_require__(/*! ./components/ph-avatar/ph-avatar */ 3);
 	
-	var _phButton = __webpack_require__(6);
+	var _phButton = __webpack_require__(/*! ./components/ph-button/ph-button */ 6);
 	
-	var _phCheckbox = __webpack_require__(8);
+	var _phCheckbox = __webpack_require__(/*! ./components/ph-checkbox/ph-checkbox */ 8);
 	
-	var _phIcon = __webpack_require__(10);
+	var _phIcon = __webpack_require__(/*! ./components/ph-icon/ph-icon */ 10);
 	
-	var _phIconBadge = __webpack_require__(13);
+	var _phIconBadge = __webpack_require__(/*! ./components/ph-icon-badge/ph-icon-badge */ 13);
 	
-	var _phImage = __webpack_require__(15);
+	var _phImage = __webpack_require__(/*! ./components/ph-image/ph-image */ 15);
 	
-	var _phIconSvgImg = __webpack_require__(17);
+	var _phIconSvgImg = __webpack_require__(/*! ./components/ph-icon-svg-img/ph-icon-svg-img */ 17);
 	
-	var _phTfu = __webpack_require__(20);
+	var _phTfu = __webpack_require__(/*! ./components/ph-tfu/ph-tfu */ 20);
 	
-	var _phTest = __webpack_require__(22);
+	var _phTest = __webpack_require__(/*! ./components/ph-test/ph-test */ 22);
 	
-	var _phTestTester = __webpack_require__(24);
+	var _phTestTester = __webpack_require__(/*! ./components/ph-test-tester/ph-test-tester */ 24);
 	
-	var _phUserAvatar = __webpack_require__(26);
+	var _phUserAvatar = __webpack_require__(/*! ./components/ph-user-avatar/ph-user-avatar */ 26);
 	
-	var _skTfu = __webpack_require__(28);
+	var _skTfu = __webpack_require__(/*! ./tags/sk-tfu/sk-tfu */ 28);
 	
 	var _skTfu2 = _interopRequireDefault(_skTfu);
 	
@@ -118,6 +127,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 3 */
+/*!***********************************************!*\
+  !*** ./src/components/ph-avatar/ph-avatar.js ***!
+  \***********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -152,9 +164,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 	
-	var _photonCore = __webpack_require__(1);
+	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phAvatar = __webpack_require__(4);
+	var _phAvatar = __webpack_require__(/*! ./ph-avatar.css */ 4);
 	
 	var _phAvatar2 = _interopRequireDefault(_phAvatar);
 	
@@ -254,9 +266,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 4 */
+/*!************************************************!*\
+  !*** ./src/components/ph-avatar/ph-avatar.css ***!
+  \************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(5)();
+	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 5)();
 	// imports
 	
 	
@@ -268,6 +283,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 5 */
+/*!**************************************!*\
+  !*** ./~/css-loader/lib/css-base.js ***!
+  \**************************************/
 /***/ function(module, exports) {
 
 	/*
@@ -324,6 +342,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 6 */
+/*!***********************************************!*\
+  !*** ./src/components/ph-button/ph-button.js ***!
+  \***********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -356,9 +377,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _photonCore = __webpack_require__(1);
+	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phButton = __webpack_require__(7);
+	var _phButton = __webpack_require__(/*! ./ph-button.jss */ 7);
 	
 	var _phButton2 = _interopRequireDefault(_phButton);
 	
@@ -489,12 +510,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 7 */
+/*!************************************************!*\
+  !*** ./src/components/ph-button/ph-button.jss ***!
+  \************************************************/
 /***/ function(module, exports) {
 
 	module.exports = {":host":{"display":"inline-block"},".container":{"display":"inline-block","backgroundColor":"#f7f7f7","border":"1px solid grey"},".selected":{"fontWeight":"bold"}}
 
 /***/ },
 /* 8 */
+/*!***************************************************!*\
+  !*** ./src/components/ph-checkbox/ph-checkbox.js ***!
+  \***************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -529,9 +556,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 	
-	var _photonCore = __webpack_require__(1);
+	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phCheckbox = __webpack_require__(9);
+	var _phCheckbox = __webpack_require__(/*! ./ph-checkbox.css */ 9);
 	
 	var _phCheckbox2 = _interopRequireDefault(_phCheckbox);
 	
@@ -662,9 +689,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 9 */
+/*!****************************************************!*\
+  !*** ./src/components/ph-checkbox/ph-checkbox.css ***!
+  \****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(5)();
+	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 5)();
 	// imports
 	
 	
@@ -676,19 +706,22 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 10 */
+/*!*******************************************!*\
+  !*** ./src/components/ph-icon/ph-icon.js ***!
+  \*******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _photonCore = __webpack_require__(1);
+	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _iconAssets = __webpack_require__(11);
+	var _iconAssets = __webpack_require__(/*! ./icon-assets.js */ 11);
 	
 	var icons = _interopRequireWildcard(_iconAssets);
 	
-	var _phIcon = __webpack_require__(12);
+	var _phIcon = __webpack_require__(/*! ./ph-icon.css */ 12);
 	
 	var _phIcon2 = _interopRequireDefault(_phIcon);
 	
@@ -750,6 +783,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 11 */
+/*!***********************************************!*\
+  !*** ./src/components/ph-icon/icon-assets.js ***!
+  \***********************************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -775,9 +811,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 12 */
+/*!********************************************!*\
+  !*** ./src/components/ph-icon/ph-icon.css ***!
+  \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(5)();
+	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 5)();
 	// imports
 	
 	
@@ -789,6 +828,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 13 */
+/*!*******************************************************!*\
+  !*** ./src/components/ph-icon-badge/ph-icon-badge.js ***!
+  \*******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -823,9 +865,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 	
-	var _photonCore = __webpack_require__(1);
+	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phIconBadge = __webpack_require__(14);
+	var _phIconBadge = __webpack_require__(/*! ./ph-icon-badge.css */ 14);
 	
 	var _phIconBadge2 = _interopRequireDefault(_phIconBadge);
 	
@@ -916,9 +958,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 14 */
+/*!********************************************************!*\
+  !*** ./src/components/ph-icon-badge/ph-icon-badge.css ***!
+  \********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(5)();
+	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 5)();
 	// imports
 	
 	
@@ -930,6 +975,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 15 */
+/*!*********************************************!*\
+  !*** ./src/components/ph-image/ph-image.js ***!
+  \*********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -962,9 +1010,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _photonCore = __webpack_require__(1);
+	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phImage = __webpack_require__(16);
+	var _phImage = __webpack_require__(/*! ./ph-image.css */ 16);
 	
 	var _phImage2 = _interopRequireDefault(_phImage);
 	
@@ -1150,9 +1198,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 16 */
+/*!**********************************************!*\
+  !*** ./src/components/ph-image/ph-image.css ***!
+  \**********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(5)();
+	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 5)();
 	// imports
 	
 	
@@ -1164,6 +1215,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 17 */
+/*!***********************************************************!*\
+  !*** ./src/components/ph-icon-svg-img/ph-icon-svg-img.js ***!
+  \***********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1192,13 +1246,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _photonCore = __webpack_require__(1);
+	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _iconAssets = __webpack_require__(18);
+	var _iconAssets = __webpack_require__(/*! ./icon-assets.js */ 18);
 	
 	var iconset = _interopRequireWildcard(_iconAssets);
 	
-	var _phIcon = __webpack_require__(19);
+	var _phIcon = __webpack_require__(/*! ./ph-icon.css */ 19);
 	
 	var _phIcon2 = _interopRequireDefault(_phIcon);
 	
@@ -1288,6 +1342,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 18 */
+/*!*******************************************************!*\
+  !*** ./src/components/ph-icon-svg-img/icon-assets.js ***!
+  \*******************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1303,9 +1360,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 19 */
+/*!****************************************************!*\
+  !*** ./src/components/ph-icon-svg-img/ph-icon.css ***!
+  \****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(5)();
+	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 5)();
 	// imports
 	
 	
@@ -1317,6 +1377,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 20 */
+/*!*****************************************!*\
+  !*** ./src/components/ph-tfu/ph-tfu.js ***!
+  \*****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1349,9 +1412,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _photonCore = __webpack_require__(1);
+	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phTfu = __webpack_require__(21);
+	var _phTfu = __webpack_require__(/*! ./ph-tfu.jss */ 21);
 	
 	var _phTfu2 = _interopRequireDefault(_phTfu);
 	
@@ -1492,12 +1555,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 21 */
+/*!******************************************!*\
+  !*** ./src/components/ph-tfu/ph-tfu.jss ***!
+  \******************************************/
 /***/ function(module, exports) {
 
 	module.exports = {":host":{"display":"inline-block"},".container":{"display":"inline-block","backgroundColor":"#f7f7f7","border":"1px solid grey"},".selected":{"fontWeight":"bold"}}
 
 /***/ },
 /* 22 */
+/*!*******************************************!*\
+  !*** ./src/components/ph-test/ph-test.js ***!
+  \*******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1532,9 +1601,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _photonCore = __webpack_require__(1);
+	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phTest = __webpack_require__(23);
+	var _phTest = __webpack_require__(/*! ./ph-test.css */ 23);
 	
 	var _phTest2 = _interopRequireDefault(_phTest);
 	
@@ -1672,9 +1741,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 23 */
+/*!********************************************!*\
+  !*** ./src/components/ph-test/ph-test.css ***!
+  \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(5)();
+	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 5)();
 	// imports
 	
 	
@@ -1686,6 +1758,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 24 */
+/*!*********************************************************!*\
+  !*** ./src/components/ph-test-tester/ph-test-tester.js ***!
+  \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1729,9 +1804,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _photonCore = __webpack_require__(1);
+	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phTestTester = __webpack_require__(25);
+	var _phTestTester = __webpack_require__(/*! ./ph-test-tester.css */ 25);
 	
 	var _phTestTester2 = _interopRequireDefault(_phTestTester);
 	
@@ -1935,9 +2010,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 25 */
+/*!**********************************************************!*\
+  !*** ./src/components/ph-test-tester/ph-test-tester.css ***!
+  \**********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(5)();
+	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 5)();
 	// imports
 	
 	
@@ -1949,6 +2027,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 26 */
+/*!*********************************************************!*\
+  !*** ./src/components/ph-user-avatar/ph-user-avatar.js ***!
+  \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1981,11 +2062,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _photonCore = __webpack_require__(1);
+	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phAvatar = __webpack_require__(3);
+	var _phAvatar = __webpack_require__(/*! ./../ph-avatar/ph-avatar */ 3);
 	
-	var _phUserAvatar = __webpack_require__(27);
+	var _phUserAvatar = __webpack_require__(/*! ./ph-user-avatar.css */ 27);
 	
 	var _phUserAvatar2 = _interopRequireDefault(_phUserAvatar);
 	
@@ -2070,9 +2151,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 27 */
+/*!**********************************************************!*\
+  !*** ./src/components/ph-user-avatar/ph-user-avatar.css ***!
+  \**********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(5)();
+	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 5)();
 	// imports
 	
 	
@@ -2084,6 +2168,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 28 */
+/*!***********************************!*\
+  !*** ./src/tags/sk-tfu/sk-tfu.js ***!
+  \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2114,11 +2201,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	}; // @Flow
 	
 	
-	var _skatejs = __webpack_require__(29);
+	var _skatejs = __webpack_require__(/*! skatejs */ 29);
 	
-	var _photonCore = __webpack_require__(1);
+	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _skTfu = __webpack_require__(32);
+	var _skTfu = __webpack_require__(/*! ./sk-tfu.jss */ 32);
 	
 	var _skTfu2 = _interopRequireDefault(_skTfu);
 	
@@ -2227,10 +2314,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 29 */
+/*!*********************************!*\
+  !*** ./~/skatejs/dist/index.js ***!
+  \*********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(30), __webpack_require__(31)) :
+	   true ? factory(exports, __webpack_require__(/*! incremental-dom */ 30), __webpack_require__(/*! window-or-global */ 31)) :
 	  typeof define === 'function' && define.amd ? define(['exports', 'incremental-dom', 'window-or-global'], factory) :
 	  (factory((global.skate = global.skate || {}),global.IncrementalDOM,global.windowOrGlobal));
 	}(this, (function (exports,incrementalDom,root) {
@@ -3821,6 +3911,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 30 */
+/*!*******************************************************!*\
+  !*** ./~/incremental-dom/dist/incremental-dom-cjs.js ***!
+  \*******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -4894,6 +4987,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 31 */
+/*!*****************************************!*\
+  !*** ./~/window-or-global/lib/index.js ***!
+  \*****************************************/
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict'
@@ -4905,6 +5001,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 32 */
+/*!************************************!*\
+  !*** ./src/tags/sk-tfu/sk-tfu.jss ***!
+  \************************************/
 /***/ function(module, exports) {
 
 	module.exports = {":host":{"display":"inline-block"},".container":{"display":"inline-block","backgroundColor":"#f7f7f7","border":"1px solid grey"},".selected":{"fontWeight":"bold"}}
