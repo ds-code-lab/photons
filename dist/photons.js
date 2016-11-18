@@ -82,41 +82,38 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.PhVehicleImage = exports.PhUserAvatar = exports.PhTestTester = exports.PhTest = exports.PhTfu = exports.PhPanel = exports.PhMore = exports.PhIconSvgImg = exports.PhImage = exports.PhIconBadge = exports.PhIcon = exports.PhCheckbox = exports.PhCard = exports.PhBanner = exports.PhAvatar = exports.PhActions = undefined;
+	exports.PhVehicleImage = exports.PhUserAvatar = exports.PhTestTester = exports.PhTest = exports.PhTfu = exports.PhPanel = exports.PhMore = exports.PhIconSvgImg = exports.PhImage = exports.PhIconBadge = exports.PhIcon = exports.PhCheckbox = exports.PhCard = exports.PhBanner = exports.PhAvatar = undefined;
 	
-	var _phActions = __webpack_require__(/*! ./components/ph-actions/ph-actions */ 3);
+	var _phAvatar = __webpack_require__(/*! ./components/ph-avatar/ph-avatar */ 3);
 	
-	var _phAvatar = __webpack_require__(/*! ./components/ph-avatar/ph-avatar */ 6);
+	var _phBanner = __webpack_require__(/*! ./components/ph-banner/ph-banner */ 6);
 	
-	var _phBanner = __webpack_require__(/*! ./components/ph-banner/ph-banner */ 8);
+	var _phCard = __webpack_require__(/*! ./components/ph-card/ph-card */ 8);
 	
-	var _phCard = __webpack_require__(/*! ./components/ph-card/ph-card */ 10);
+	var _phCheckbox = __webpack_require__(/*! ./components/ph-checkbox/ph-checkbox */ 10);
 	
-	var _phCheckbox = __webpack_require__(/*! ./components/ph-checkbox/ph-checkbox */ 12);
+	var _phIcon = __webpack_require__(/*! ./components/ph-icon/ph-icon */ 12);
 	
-	var _phIcon = __webpack_require__(/*! ./components/ph-icon/ph-icon */ 14);
+	var _phIconBadge = __webpack_require__(/*! ./components/ph-icon-badge/ph-icon-badge */ 14);
 	
-	var _phIconBadge = __webpack_require__(/*! ./components/ph-icon-badge/ph-icon-badge */ 16);
+	var _phImage = __webpack_require__(/*! ./components/ph-image/ph-image */ 16);
 	
-	var _phImage = __webpack_require__(/*! ./components/ph-image/ph-image */ 18);
+	var _phIconSvgImg = __webpack_require__(/*! ./components/ph-icon-svg-img/ph-icon-svg-img */ 18);
 	
-	var _phIconSvgImg = __webpack_require__(/*! ./components/ph-icon-svg-img/ph-icon-svg-img */ 20);
+	var _phMore = __webpack_require__(/*! ./components/ph-more/ph-more */ 21);
 	
-	var _phMore = __webpack_require__(/*! ./components/ph-more/ph-more */ 23);
+	var _phPanel = __webpack_require__(/*! ./components/ph-panel/ph-panel */ 23);
 	
-	var _phPanel = __webpack_require__(/*! ./components/ph-panel/ph-panel */ 25);
+	var _phTfu = __webpack_require__(/*! ./components/ph-tfu/ph-tfu */ 25);
 	
-	var _phTfu = __webpack_require__(/*! ./components/ph-tfu/ph-tfu */ 27);
+	var _phTest = __webpack_require__(/*! ./components/ph-test/ph-test */ 27);
 	
-	var _phTest = __webpack_require__(/*! ./components/ph-test/ph-test */ 29);
+	var _phTestTester = __webpack_require__(/*! ./components/ph-test-tester/ph-test-tester */ 29);
 	
-	var _phTestTester = __webpack_require__(/*! ./components/ph-test-tester/ph-test-tester */ 31);
+	var _phUserAvatar = __webpack_require__(/*! ./components/ph-user-avatar/ph-user-avatar */ 31);
 	
-	var _phUserAvatar = __webpack_require__(/*! ./components/ph-user-avatar/ph-user-avatar */ 33);
+	var _phVehicleImage = __webpack_require__(/*! ./components/ph-vehicle-image/ph-vehicle-image */ 33);
 	
-	var _phVehicleImage = __webpack_require__(/*! ./components/ph-vehicle-image/ph-vehicle-image */ 35);
-	
-	exports.PhActions = _phActions.PhActions;
 	exports.PhAvatar = _phAvatar.PhAvatar;
 	exports.PhBanner = _phBanner.PhBanner;
 	exports.PhCard = _phCard.PhCard;
@@ -132,163 +129,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.PhTestTester = _phTestTester.PhTestTester;
 	exports.PhUserAvatar = _phUserAvatar.PhUserAvatar;
 	exports.PhVehicleImage = _phVehicleImage.PhVehicleImage;
+	
+	//import {PhActions} from './components/ph-actions/ph-actions'
 
 /***/ },
 /* 3 */
-/*!*************************************************!*\
-  !*** ./src/components/ph-actions/ph-actions.js ***!
-  \*************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.PhActions = undefined;
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _photonCore = __webpack_require__(/*! photon-core */ 1);
-	
-	var _phActions = __webpack_require__(/*! ./ph-actions.css */ 4);
-	
-	var _phActions2 = _interopRequireDefault(_phActions);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
-	
-	var PhActions = exports.PhActions = function (_Component) {
-	    _inherits(PhActions, _Component);
-	
-	    function PhActions() {
-	        _classCallCheck(this, PhActions);
-	
-	        return _possibleConstructorReturn(this, (PhActions.__proto__ || Object.getPrototypeOf(PhActions)).apply(this, arguments));
-	    }
-	
-	    _createClass(PhActions, [{
-	        key: 'renderCallback',
-	        value: function renderCallback() {
-	            var _this2 = this;
-	
-	            return (0, _photonCore.h)(
-	                'div',
-	                null,
-	                (0, _photonCore.h)(
-	                    'style',
-	                    null,
-	                    _phActions2.default.toString()
-	                ),
-	                this.actions.map(function (action, index) {
-	                    return (0, _photonCore.h)('ph-icon-badge', { key: index, icon: action, size: _this2.size });
-	                })
-	            );
-	        }
-	    }], [{
-	        key: 'props',
-	        get: function get() {
-	            return {
-	                actions: _photonCore.prop.array({
-	                    attribute: true,
-	                    default: ['usd', 'wrench', 'building']
-	                }),
-	                size: _photonCore.prop.string({
-	                    attribute: true,
-	                    default: 'medium'
-	                })
-	            };
-	        }
-	    }]);
-	
-	    return PhActions;
-	}(_photonCore.Component);
-	
-	customElements.define('ph-actions', PhActions);
-
-/***/ },
-/* 4 */
-/*!**************************************************!*\
-  !*** ./src/components/ph-actions/ph-actions.css ***!
-  \**************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 5)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ":host {\n    display: inline-flex;\n    justify-content: space-between;\n}\n\nph-icon-badge {\n    margin-right: 5px;\n    display: inline-flex;\n\n}\n\nph-icon-badge:last-child {\n    margin-right: 0;\n}\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 5 */
-/*!**************************************!*\
-  !*** ./~/css-loader/lib/css-base.js ***!
-  \**************************************/
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-	
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-	
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
-/* 6 */
 /*!***********************************************!*\
   !*** ./src/components/ph-avatar/ph-avatar.js ***!
   \***********************************************/
@@ -305,7 +150,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phAvatar = __webpack_require__(/*! ./ph-avatar.css */ 7);
+	var _phAvatar = __webpack_require__(/*! ./ph-avatar.css */ 4);
 	
 	var _phAvatar2 = _interopRequireDefault(_phAvatar);
 	
@@ -315,8 +160,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
-	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var PhAvatar = exports.PhAvatar = function (_Component) {
 	    _inherits(PhAvatar, _Component);
@@ -403,7 +247,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-avatar', PhAvatar);
 
 /***/ },
-/* 7 */
+/* 4 */
 /*!************************************************!*\
   !*** ./src/components/ph-avatar/ph-avatar.css ***!
   \************************************************/
@@ -420,7 +264,66 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 8 */
+/* 5 */
+/*!**************************************!*\
+  !*** ./~/css-loader/lib/css-base.js ***!
+  \**************************************/
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+	
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+	
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+
+/***/ },
+/* 6 */
 /*!***********************************************!*\
   !*** ./src/components/ph-banner/ph-banner.js ***!
   \***********************************************/
@@ -437,7 +340,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phBanner = __webpack_require__(/*! ./ph-banner.css */ 9);
+	var _phBanner = __webpack_require__(/*! ./ph-banner.css */ 7);
 	
 	var _phBanner2 = _interopRequireDefault(_phBanner);
 	
@@ -447,7 +350,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var PhBanner = exports.PhBanner = function (_Component) {
 	    _inherits(PhBanner, _Component);
@@ -493,7 +396,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-banner', PhBanner);
 
 /***/ },
-/* 9 */
+/* 7 */
 /*!************************************************!*\
   !*** ./src/components/ph-banner/ph-banner.css ***!
   \************************************************/
@@ -510,7 +413,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 10 */
+/* 8 */
 /*!*******************************************!*\
   !*** ./src/components/ph-card/ph-card.js ***!
   \*******************************************/
@@ -527,7 +430,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phCard = __webpack_require__(/*! ./ph-card.css */ 11);
+	var _phCard = __webpack_require__(/*! ./ph-card.css */ 9);
 	
 	var _phCard2 = _interopRequireDefault(_phCard);
 	
@@ -537,7 +440,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var PhCard = exports.PhCard = function (_Component) {
 	    _inherits(PhCard, _Component);
@@ -661,7 +564,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-card', PhCard);
 
 /***/ },
-/* 11 */
+/* 9 */
 /*!********************************************!*\
   !*** ./src/components/ph-card/ph-card.css ***!
   \********************************************/
@@ -678,7 +581,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 12 */
+/* 10 */
 /*!***************************************************!*\
   !*** ./src/components/ph-checkbox/ph-checkbox.js ***!
   \***************************************************/
@@ -697,7 +600,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phCheckbox = __webpack_require__(/*! ./ph-checkbox.css */ 13);
+	var _phCheckbox = __webpack_require__(/*! ./ph-checkbox.css */ 11);
 	
 	var _phCheckbox2 = _interopRequireDefault(_phCheckbox);
 	
@@ -707,7 +610,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var PhCheckbox = exports.PhCheckbox = function (_Component) {
 	    _inherits(PhCheckbox, _Component);
@@ -760,7 +663,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        key: 'updatedCallback',
 	        value: function updatedCallback(prevProps) {
 	            //console.log(this.tagName, 'updatedCallback', prevProps);
-	            if (!prevProps || prevProps.disabled !== elem.disabled) {
+	            if (!prevProps || prevProps.disabled !== this.disabled) {
 	                if (this.disabled) {
 	                    this.setAttribute('aria-disabled', 'true');
 	                    this[priv].prevTabIndex = this.tabIndex;
@@ -771,7 +674,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            }
 	
-	            if (!prevProps || prevProps.checked !== elem.checked) {
+	            if (!prevProps || prevProps.checked !== this.checked) {
 	                if (this.checked) {
 	                    this.setAttribute('aria-checked', 'true');
 	                } else {
@@ -845,7 +748,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-checkbox', PhCheckbox);
 
 /***/ },
-/* 13 */
+/* 11 */
 /*!****************************************************!*\
   !*** ./src/components/ph-checkbox/ph-checkbox.css ***!
   \****************************************************/
@@ -862,7 +765,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 14 */
+/* 12 */
 /*!*******************************************!*\
   !*** ./src/components/ph-icon/ph-icon.js ***!
   \*******************************************/
@@ -870,11 +773,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.PhIcon = undefined;
+	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _iconAssets = __webpack_require__(/*! ./icon-assets.js */ 15);
+	var _iconAssets = __webpack_require__(/*! ./icon-assets.js */ 13);
 	
 	var icons = _interopRequireWildcard(_iconAssets);
 	
@@ -884,9 +792,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var PhIcon = function (_Component) {
+	var PhIcon = exports.PhIcon = function (_Component) {
 	    _inherits(PhIcon, _Component);
 	
 	    function PhIcon() {
@@ -901,7 +809,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            // using idom when rendering a svg fails silently
 	            // the output looks good but does not render the paths
 	
-	            if (!prevProps || prevProps.name !== elem.name || prevProps.size !== elem.size) {
+	            if (!prevProps || prevProps.name !== this.name || prevProps.size !== this.size) {
 	                this.innerHTML = '<svg viewBox="0 0 24 24" width="' + this.size + '" height="' + this.size + '">' + icons[this.name] + '</svg>';
 	            }
 	            return false;
@@ -928,7 +836,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-icon', PhIcon);
 
 /***/ },
-/* 15 */
+/* 13 */
 /*!***********************************************!*\
   !*** ./src/components/ph-icon/icon-assets.js ***!
   \***********************************************/
@@ -960,7 +868,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var down = exports.down = "<path d=\"M22,7.33a1.33,1.33,0,0,1-.37.94L12.88,17.6a1.18,1.18,0,0,1-1.76,0L2.37,8.27a1.37,1.37,0,0,1,0-1.88A1.17,1.17,0,0,1,3.25,6h17.5a1.17,1.17,0,0,1,.88.4A1.32,1.32,0,0,1,22,7.33Z\"/>";
 
 /***/ },
-/* 16 */
+/* 14 */
 /*!*******************************************************!*\
   !*** ./src/components/ph-icon-badge/ph-icon-badge.js ***!
   \*******************************************************/
@@ -977,7 +885,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phIconBadge = __webpack_require__(/*! ./ph-icon-badge.css */ 17);
+	var _phIconBadge = __webpack_require__(/*! ./ph-icon-badge.css */ 15);
 	
 	var _phIconBadge2 = _interopRequireDefault(_phIconBadge);
 	
@@ -987,7 +895,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var sizes = {
 	    'small': 10,
@@ -1051,7 +959,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-icon-badge', PhIconBadge);
 
 /***/ },
-/* 17 */
+/* 15 */
 /*!********************************************************!*\
   !*** ./src/components/ph-icon-badge/ph-icon-badge.css ***!
   \********************************************************/
@@ -1068,7 +976,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 18 */
+/* 16 */
 /*!*********************************************!*\
   !*** ./src/components/ph-image/ph-image.js ***!
   \*********************************************/
@@ -1087,7 +995,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phImage = __webpack_require__(/*! ./ph-image.css */ 19);
+	var _phImage = __webpack_require__(/*! ./ph-image.css */ 17);
 	
 	var _phImage2 = _interopRequireDefault(_phImage);
 	
@@ -1097,7 +1005,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var PhImage = exports.PhImage = function (_Component) {
 	    _inherits(PhImage, _Component);
@@ -1302,7 +1210,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-image', PhImage);
 
 /***/ },
-/* 19 */
+/* 17 */
 /*!**********************************************!*\
   !*** ./src/components/ph-image/ph-image.css ***!
   \**********************************************/
@@ -1319,7 +1227,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 20 */
+/* 18 */
 /*!***********************************************************!*\
   !*** ./src/components/ph-icon-svg-img/ph-icon-svg-img.js ***!
   \***********************************************************/
@@ -1327,15 +1235,20 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.PhIconSvgImg = undefined;
+	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _iconAssets = __webpack_require__(/*! ./icon-assets.js */ 21);
+	var _iconAssets = __webpack_require__(/*! ./icon-assets.js */ 19);
 	
 	var iconset = _interopRequireWildcard(_iconAssets);
 	
-	var _phIcon = __webpack_require__(/*! ./ph-icon.css */ 22);
+	var _phIcon = __webpack_require__(/*! ./ph-icon.css */ 20);
 	
 	var _phIcon2 = _interopRequireDefault(_phIcon);
 	
@@ -1347,9 +1260,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var PhIconSvgImg = function (_Component) {
+	var PhIconSvgImg = exports.PhIconSvgImg = function (_Component) {
 	    _inherits(PhIconSvgImg, _Component);
 	
 	    function PhIconSvgImg() {
@@ -1444,7 +1357,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-icon-svg-img', PhIconSvgImg);
 
 /***/ },
-/* 21 */
+/* 19 */
 /*!*******************************************************!*\
   !*** ./src/components/ph-icon-svg-img/icon-assets.js ***!
   \*******************************************************/
@@ -1462,7 +1375,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var wrench = exports.wrench = '<g><path d="M6.4,18.4c0-0.2-0.1-0.4-0.2-0.5c-0.2-0.2-0.3-0.2-0.5-0.2c-0.2,0-0.4,0.1-0.5,0.2c-0.2,0.2-0.2,0.3-0.2,0.5\n\tc0,0.2,0.1,0.4,0.2,0.5c0.2,0.2,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C6.3,18.8,6.4,18.6,6.4,18.4z M14.3,13.2L6,21.5\n\tC5.7,21.8,5.3,22,4.9,22c-0.4,0-0.8-0.2-1.1-0.5l-1.3-1.3C2.2,19.9,2,19.6,2,19.1c0-0.4,0.2-0.8,0.5-1.1l8.3-8.3\n\tc0.3,0.8,0.8,1.5,1.4,2.1S13.5,12.9,14.3,13.2z M22,8c0,0.3-0.1,0.7-0.3,1.3c-0.4,1.1-1.1,2-2,2.6c-1,0.7-2,1-3.2,1\n\tc-1.5,0-2.8-0.5-3.9-1.6c-1.1-1.1-1.6-2.4-1.6-3.9s0.5-2.8,1.6-3.9S15.1,2,16.6,2c0.5,0,1,0.1,1.5,0.2c0.5,0.1,1,0.3,1.3,0.6\n\tc0.1,0.1,0.2,0.2,0.2,0.3c0,0.1-0.1,0.3-0.2,0.3l-3.6,2.1v2.7l2.4,1.3c0,0,0.4-0.2,1-0.6c0.6-0.4,1.2-0.7,1.7-1\n\tc0.5-0.3,0.8-0.4,0.9-0.4c0.1,0,0.2,0,0.3,0.1C22,7.7,22,7.8,22,8L22,8z"/></g>';
 
 /***/ },
-/* 22 */
+/* 20 */
 /*!****************************************************!*\
   !*** ./src/components/ph-icon-svg-img/ph-icon.css ***!
   \****************************************************/
@@ -1479,7 +1392,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 23 */
+/* 21 */
 /*!*******************************************!*\
   !*** ./src/components/ph-more/ph-more.js ***!
   \*******************************************/
@@ -1496,7 +1409,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phMore = __webpack_require__(/*! ./ph-more.css */ 24);
+	var _phMore = __webpack_require__(/*! ./ph-more.css */ 22);
 	
 	var _phMore2 = _interopRequireDefault(_phMore);
 	
@@ -1506,7 +1419,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var PhMore = exports.PhMore = function (_Component) {
 	    _inherits(PhMore, _Component);
@@ -1588,7 +1501,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-more', PhMore);
 
 /***/ },
-/* 24 */
+/* 22 */
 /*!********************************************!*\
   !*** ./src/components/ph-more/ph-more.css ***!
   \********************************************/
@@ -1605,7 +1518,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 25 */
+/* 23 */
 /*!*********************************************!*\
   !*** ./src/components/ph-panel/ph-panel.js ***!
   \*********************************************/
@@ -1622,7 +1535,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phPanel = __webpack_require__(/*! ./ph-panel.css */ 26);
+	var _phPanel = __webpack_require__(/*! ./ph-panel.css */ 24);
 	
 	var _phPanel2 = _interopRequireDefault(_phPanel);
 	
@@ -1632,7 +1545,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var PhPanel = exports.PhPanel = function (_Component) {
 	    _inherits(PhPanel, _Component);
@@ -1669,7 +1582,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-panel', PhPanel);
 
 /***/ },
-/* 26 */
+/* 24 */
 /*!**********************************************!*\
   !*** ./src/components/ph-panel/ph-panel.css ***!
   \**********************************************/
@@ -1686,7 +1599,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 27 */
+/* 25 */
 /*!*****************************************!*\
   !*** ./src/components/ph-tfu/ph-tfu.js ***!
   \*****************************************/
@@ -1705,7 +1618,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phTfu = __webpack_require__(/*! ./ph-tfu.jss */ 28);
+	var _phTfu = __webpack_require__(/*! ./ph-tfu.jss */ 26);
 	
 	var _phTfu2 = _interopRequireDefault(_phTfu);
 	
@@ -1715,8 +1628,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
-	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var priv = Symbol();
 	
@@ -1726,7 +1638,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(PhTfu, null, [{
 	        key: 'props',
 	        get: function get() {
-	            console.log('PhTfu', 'get props');
+	            //console.log('PhTfu', '>>>>get props');
 	            return {
 	                value: _photonCore.prop.string({
 	                    attribute: true
@@ -1892,7 +1804,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-tfu', PhTfu, undefined);
 
 /***/ },
-/* 28 */
+/* 26 */
 /*!******************************************!*\
   !*** ./src/components/ph-tfu/ph-tfu.jss ***!
   \******************************************/
@@ -1901,7 +1813,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = {":host":{"display":"inline-block"},".container":{"display":"inline-block","backgroundColor":"#f7f7f7","border":"1px solid grey"},".selected":{"fontWeight":"bold"}}
 
 /***/ },
-/* 29 */
+/* 27 */
 /*!*******************************************!*\
   !*** ./src/components/ph-test/ph-test.js ***!
   \*******************************************/
@@ -1920,7 +1832,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phTest = __webpack_require__(/*! ./ph-test.css */ 30);
+	var _phTest = __webpack_require__(/*! ./ph-test.css */ 28);
 	
 	var _phTest2 = _interopRequireDefault(_phTest);
 	
@@ -1930,7 +1842,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var PhTest = exports.PhTest = function (_Component) {
 	    _inherits(PhTest, _Component);
@@ -2041,7 +1953,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-test', PhTest);
 
 /***/ },
-/* 30 */
+/* 28 */
 /*!********************************************!*\
   !*** ./src/components/ph-test/ph-test.css ***!
   \********************************************/
@@ -2058,7 +1970,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 31 */
+/* 29 */
 /*!*********************************************************!*\
   !*** ./src/components/ph-test-tester/ph-test-tester.js ***!
   \*********************************************************/
@@ -2077,7 +1989,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phTestTester = __webpack_require__(/*! ./ph-test-tester.css */ 32);
+	var _phTestTester = __webpack_require__(/*! ./ph-test-tester.css */ 30);
 	
 	var _phTestTester2 = _interopRequireDefault(_phTestTester);
 	
@@ -2087,7 +1999,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var propValues = [undefined, null, NaN, '', '0', '1', 'false', 'true', 0, 1, false, true];
 	var attrValues = [undefined, null, 'NaN', '', '0', '1', 'false', 'true'];
@@ -2255,7 +2167,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-test-tester', PhTestTester);
 
 /***/ },
-/* 32 */
+/* 30 */
 /*!**********************************************************!*\
   !*** ./src/components/ph-test-tester/ph-test-tester.css ***!
   \**********************************************************/
@@ -2272,7 +2184,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 33 */
+/* 31 */
 /*!*********************************************************!*\
   !*** ./src/components/ph-user-avatar/ph-user-avatar.js ***!
   \*********************************************************/
@@ -2287,13 +2199,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } }; // @Flow
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phAvatar = __webpack_require__(/*! ./../ph-avatar/ph-avatar */ 6);
+	var _phAvatar = __webpack_require__(/*! ./../ph-avatar/ph-avatar */ 3);
 	
-	var _phUserAvatar = __webpack_require__(/*! ./ph-user-avatar.css */ 34);
+	var _phUserAvatar = __webpack_require__(/*! ./ph-user-avatar.css */ 32);
 	
 	var _phUserAvatar2 = _interopRequireDefault(_phUserAvatar);
 	
@@ -2415,7 +2327,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-user-avatar', PhUserAvatar);
 
 /***/ },
-/* 34 */
+/* 32 */
 /*!**********************************************************!*\
   !*** ./src/components/ph-user-avatar/ph-user-avatar.css ***!
   \**********************************************************/
@@ -2432,7 +2344,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 35 */
+/* 33 */
 /*!*************************************************************!*\
   !*** ./src/components/ph-vehicle-image/ph-vehicle-image.js ***!
   \*************************************************************/
@@ -2451,7 +2363,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _photonCore = __webpack_require__(/*! photon-core */ 1);
 	
-	var _phVehicleImage = __webpack_require__(/*! ./ph-vehicle-image.css */ 36);
+	var _phVehicleImage = __webpack_require__(/*! ./ph-vehicle-image.css */ 34);
 	
 	var _phVehicleImage2 = _interopRequireDefault(_phVehicleImage);
 	
@@ -2461,8 +2373,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // @Flow
-	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var PhVehicleImage = exports.PhVehicleImage = function (_Component) {
 	    _inherits(PhVehicleImage, _Component);
@@ -2538,7 +2449,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	customElements.define('ph-vehicle-image', PhVehicleImage);
 
 /***/ },
-/* 36 */
+/* 34 */
 /*!**************************************************************!*\
   !*** ./src/components/ph-vehicle-image/ph-vehicle-image.css ***!
   \**************************************************************/
